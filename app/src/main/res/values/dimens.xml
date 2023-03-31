@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_result_calculator">@dimen/_46ssp</dimen>
+    <dimen name="activity_padding">@dimen/_24sdp</dimen>
+    <dimen name="button_calculator">@dimen/_63sdp</dimen>
+    <dimen name="button_margin">@dimen/_10sdp</dimen>
+    <dimen name="radius_button">@dimen/_16sdp</dimen>
+    <dimen name="textSize_button">@dimen/_18ssp</dimen>
+</resources>

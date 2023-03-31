@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.danendra.calculator.MainActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_padding"
+                android:gravity="end|center_vertical"
+                android:maxLines="1"
+                android:scrollbars="horizontal"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_result_calculator"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/nol" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:columnCount="4"
+                android:rowCount="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_result"
+                app:layout_constraintVertical_bias="0.110000014">
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDecimal(view)}"
+                    android:text="@string/koma"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onBreaketStart(view)}"
+                    android:text="@string/kurung_buka"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onBreaketEnd(view)}"
+                    android:text="@string/kurung_tutup"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onOperator(view)}"
+                    android:text="@string/pertambahan"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/satu"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/dua"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/tiga"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onOperator(view)}"
+                    android:text="@string/pengurangan"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/empat"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/lima"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/enam"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onOperator(view)}"
+                    android:text="@string/perkalian"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/tujuh"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/delapan"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/sembilan"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onOperator(view)}"
+                    android:text="@string/pembagian"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onClear(view)}"
+                    android:text="@string/clear"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_yellow"
+                    android:onClick="@{(view) -> activity.onDelete(view)}"
+                    android:text="@string/delete"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_columnSpan="1"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:background="@drawable/background_button_gray"
+                    android:onClick="@{(view) -> activity.onDigit(view)}"
+                    android:text="@string/nol"
+                    android:textSize="@dimen/textSize_button" />
+
+                <Button
+                    android:layout_width="@dimen/button_calculator"
+                    android:layout_height="@dimen/button_calculator"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:background="@drawable/background_button_green"
+                    android:onClick="@{(view) -> activity.onEqual(view)}"
+                    android:text="@string/sama_dengan"
+                    android:textSize="@dimen/textSize_button" />
+            </GridLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
